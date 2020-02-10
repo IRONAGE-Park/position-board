@@ -1,0 +1,17 @@
+<article class="Content-Hotview">
+    <div class="Content-View-Title head-line5">
+        실시간 인기 급상승 제품
+    </div>
+    <div class="Content-Hotview-Container">
+        <% for (let i = 0; i < viewList.length; i++) {%>
+        <div class="Content-Hotview-Box">
+            <div class="Content-Hotview-Imgbox">
+                <img class="Content-Hotview-Img" src=<%=viewList[i]['image']%>>
+            </div>
+            <div class="Content-Hotview-Titlebox sub-title1">
+                <span class="Content-Hotview-Title"><%=viewList[i]['text']%></span>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</article>

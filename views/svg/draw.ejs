@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .shapes {
+            width: 600px;
+            height: 400px;
+            background: #ddd;
+        }
+
+        rect {
+            fill: orange;
+            stroke: dodgerblue;
+            stroke-width: 10;
+        }
+
+        .shapes path {
+            stroke: tomato;
+            stroke-width: 5;
+            fill: transparent;
+        }
+
+        .shapes .strokeTest {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 20;
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
+        <!-- 기본 도형 EXAMPLE -->
+        <rect x="310" y="270" width="200" height="100"></rect>
+        <rect x="250" y="20" rx="10" ry="10" width="100" height="100"></rect>
+        <circle cx="450" cy="50" r="30"></circle>
+        <ellipse cx="420" cy="200" rx="100" ry="50" fill="red" stroke="green" stroke-width="20"></ellipse>
+        <polygon points="25 25, 200 100, 150 300" stroke="red" stroke-width="10"></polygon>
+        <line x1="25" x2="400" y1="30" y2="300" stroke="blue"></line>
+    </svg>
+
+    <svg class="shapes" xmlns="http://www.w3.org/2000/svg">
+        <!-- PATH EXAMPLE -->
+        <!--
+            M: 시작점 설정
+            L: 직선 긋기(x좌표 y좌표)
+            H: 수평선 긋기(x좌표)
+            V: 수직선 긋기(y좌표)
+            Z: 그어진 선 나머지 잇기(다각형 생성)
+        -->
+        <path d="M 300 200 L 500 100 H 50 V 300 Z"></path>
+        <!--
+            C: 곡선 설정(시작점, 중간점, 끝점)
+        -->
+        <path d="M 100 150 C 100 150, 300 50, 500 250"></path>
+    </svg>
+    <svg class="shapes">
+        <path class="strokeTest" d="M 50 200 L 300 100 L 400 200"></path>
+    </svg>
+</body>
+
+</html>

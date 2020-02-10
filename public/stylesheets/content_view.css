@@ -1,0 +1,40 @@
+.Content {
+    width: 1280px;
+    margin: auto;
+}
+.Content-View {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.Content-Header {
+    background-color: #707070;
+    color: white;
+    height: 60px;
+    border: none;
+    border: solid 2px #707070;
+}
+.Content-List-Element {
+    height: 100px;
+    border: solid 2px #707070;
+}
+.Content-List-Element:hover {
+    background-color: #B5B5B5;
+}
+.Content-List-No { 
+    width: 40px; 
+    font-size: 0.625rem;
+}
+.Content-List-writer {
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+.Content-List-title { font-size: 1rem; }
+.Content-List-tag { font-size: 0.75rem; }
+.Content-List-date, .Content-List-view, .Content-List-recommend { font-size: 0.625rem; }
+.Content-List-TitleImage {
+    background-color: #E2E2E2;
+    border-radius: 10px;
+    height: 90px;
+}
+.Content-List-Recommend { vertical-align: middle; }

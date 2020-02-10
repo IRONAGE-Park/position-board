@@ -1,0 +1,93 @@
+.Create {
+    width: 92%;
+    border: solid 1px #707070;
+    margin: 50px auto;
+}
+
+.Create-News {
+    padding: 50px 30px;
+    border-bottom: solid 1px #707070;
+}
+.Create-News-Post {
+    display: inline-block;
+    width: 200px;
+    padding: 0px 5px;
+    font-size: 0.625rem;
+}
+.Create-News-Post:hover { background-color: #D0D0D0; }
+.Create-News-Image {
+    width: 200px;
+}
+.Create-News-Text {
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.Create-Post {
+    padding: 0 50px;
+    font-size: 0.875rem;
+}
+
+.Create-Post-Table {
+    border: solid 2px #707070;
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+.Create-Post-Table td, .Create-Post-Table th {
+    border: solid 2px #707070;
+}
+.Create-Post-Table-Head {
+    background-color: #0066FF;
+    color: white;
+    font-weight: bold;
+}
+.Create-Post-Table-Body {
+    height: 50px;
+}
+.Create-Post-Table-Category {
+    width: 150px;
+    color: #0066FF;
+    font-weight: bold; 
+}
+
+.Create-Post-Content {
+    padding: 10px;
+}
+.Create-Post-Title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.Create-Post-Text {
+    border: solid 1px #707070;
+    padding: 0 10px;
+}
+
+.Create-Post-Upload {
+    position: relative;
+}
+
+.Create-Post-Youtube {
+    display: inline-block;
+}
+.Create-Post-Youtube-Image { 
+    vertical-align: middle;
+}
+.Create-Post-Youtube-Text {
+    font-weight: bold;
+}
+
+.Create-Post-Upload-Button {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: #0066FF;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    color: white;
+    width: 100px;
+    line-height: 36px;
+}

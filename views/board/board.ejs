@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chartist</title>
+    <link rel='stylesheet' href='/stylesheets/index.css'>
+    <link rel='stylesheet' href='/stylesheets/header.css'>
+    <link rel='stylesheet' href='/stylesheets/nav.css'>
+    <link rel='stylesheet' href='/stylesheets/board.css'>
+    <link rel='stylesheet' href='/stylesheets/content_view.css'>
+</head>
+<body>      
+    <section class='Container'>
+        <article class='Content'>
+            <% include ../header.ejs %>
+            <% include ../nav.ejs %>
+            <div class='Content-Filter'>
+                <div class='Content-Filter-Type'>
+                    <span class='Content-Filter-Type-Element Type-Selected'>비교 / 분석</span>
+                    <span class='Content-Filter-Type-Element'>제품만 보기</span>
+                </div>
+                <ul class='Content-Filter-List'>
+                    <li class='Content-Filter-List-Element'>조회수 <img src="images/direction.svg"></li>
+                    <li class='Content-Filter-List-Element'>댓글수 <img src="images/direction.svg"></li>
+                    <li class='Content-Filter-List-Element'>평가수 <img src="images/direction.svg"></li>
+                    <li class='Content-Filter-List-Element List-Selected'>등록일 <img class="Sort-Up" src="images/direction_on.svg"></li>
+                </ul>
+                <div class='Content-Filter-Size'>
+                    <%=size%>개씩 보기 <img class="Size-Down" src="images/direction.svg">
+                    <ul class='Content-Filter-Size-Selector'>
+                        <li><a href="/board?size=5" class='Content-Filter-Size-Element'>5개씩 보기</a></li>
+                        <li><a href="/board?size=10" class='Content-Filter-Size-Element'>10개씩 보기</a></li>
+                        <li><a href="/board?size=20" class='Content-Filter-Size-Element'>20개씩 보기</a></li>
+                        <li><a href="/board?size=50" class='Content-Filter-Size-Element'>50개씩 보기</a></li>
+                    </ul>
+                </div>
+            </div>
+            <%- include('../content_view' , {
+                data: data,
+                contentKey: contentKey,
+                contentHead: contentHead
+              }) %>
+            <div class='Content-Page'>
+            <% for (let i = 0; i < pageNum; i++) { 
+                    if (i == page - 1) { %>
+                        <span class='Content-Page-Number Page-Selected'><%=i + 1%></span>
+            <%      } else { %>
+                        <a href=<%="/board?page="+(i+1)%> class='Content-Page-Number'><%=i + 1%></a>
+            <%      }
+                } %>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<table class='Content-View'>
+  <tbody>
+    <tr class='Content-Header'>
+      <% for (let i = 0; i < contentHead.length; i++) { %>
+      <th class='Content-Header-Element'>
+        <%=contentHead[i]%>
+      </th>
+      <% } %>
+    </tr>
+    <% for (let i = 0; i < data.length; i++) { %>
+    <tr class='Content-List-Element'>
+      <% for (let k = 0; k < contentKey.length; k++) { %>
+      <td class=<%='Content-List-'+contentKey[k] %>>
+        <% if (k == 1) { %>
+        <img src='' alt='titleImage' class='Content-List-TitleImage' />
+        <% } else if (k == 4) { 
+              for (let t = 0; t < contentKey[k].length; t++) { %>
+                <%= '#'+ data[i][contentKey[k]][t]+' ' %>
+        <%     }
+          } else if (k == 7) { %>
+        <img src='./images/recommend_img.svg' alt='titleImage' class='Content-List-Recommend' />
+        <%= data[i][contentKey[k]] %>
+        <% } else { %>
+        <%= data[i][contentKey[k]] %>
+        <% } %>
+      </td>
+      <% } %>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
